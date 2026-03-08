@@ -1,0 +1,25 @@
+GET / HTTP/1.0
+
+GET /web2/files/index.php HTTP/1.1
+HOST: u82466.kubsu-dev.ru
+
+HEAD /web2/files/file.tar.gz HTTP/1.1
+Host: u82466.kubsu-dev.ru
+
+HEAD /web2/files/image.png HTTP/1.1
+Host: u82466.kubsu-dev.ru
+
+POST /web2/files/index.php HTTP/1.1
+Host: u82466.kubsu-dev.ru
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 12
+Connection: close
+
+comment="Hello"
+
+GET /web2/files/file.tar.gz HTTP/1.1
+Host: u82466.kubsu-dev.ru
+Range: bytes=0-99
+
+HEAD /web2/files/index.php HTTP/1.1
+Host: u82466.kubsu-dev.ru
